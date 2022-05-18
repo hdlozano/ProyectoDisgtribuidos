@@ -8,7 +8,8 @@
 </head>
 <body>
     <header>
-        <ul> 
+    
+        <ul class = "main_nav"> 
             <li>
                <a href="./Index.jsp">Inicio</a> 
                 

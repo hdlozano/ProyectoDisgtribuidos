@@ -21,7 +21,7 @@
  				<li class="main_nav__item">
 					<a href="./Registro.jsp">Registro</a>
  				</li>
- 				<li>
+ 				<li class="main_nav__item">
 					<a href="./Comprar.jsp">Comprar</a>
  				</li>
  				<li class="main_nav__item">

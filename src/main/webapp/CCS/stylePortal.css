@@ -28,3 +28,10 @@
 main{
     align-content: center;
 }
+
+.formulario_item{
+    margin: 30px;
+    text-align: center;
+    display: list-item;
+    list-style: none;
+}

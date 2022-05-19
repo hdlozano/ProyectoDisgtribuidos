@@ -37,9 +37,11 @@ main{
 }
 
 .formulario_item{
+    margin: 30px;
     text-align: center;
     margin-top: 10px;
-    display: inline-flex;
+    display: list-item;
+    list-style: none;
 }
 
 #enviar{
@@ -50,4 +52,11 @@ main{
 #cancelar{
     text-align: center;
     text-decoration: none;
+}
+
+.label_input{
+    margin-right: 30px;
+    max-width: 300px;
+    text-align: left;
+
 }

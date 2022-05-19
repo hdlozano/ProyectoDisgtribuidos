@@ -28,51 +28,33 @@
     </header>
     <main>
       <form action="./" class="formulario">
-        <LAbel for="nombre" class="formulario_item">
-          <span>¿Cual es tu nombre?</span>
+        <label for="nombre" class="formulario_item">
+          <span class="label_input">¿Cual es tu nombre?</span>
           <input type="text" name="nombre" id="nombre" />
-        </LAbel>
+        </label>
 
-        <LAbel for="id" class="formulario_item">
-          <span>¿Cual es tu identificac&iacuteon?</span>
-          <input
-            type="number"
-            name="id"
-            id="id"
-            autocomplete="cc-number"
-            required
-          />
-        </LAbel>
+        <label for="id" class="formulario_item">
+          <span class="label_input">¿Cual es tu identificac&iacuteon?</span>
+          <input type="number" name="id" id="id" autocomplete="cc-number" required />
+        </label>
 
-        <LAbel for="correo" class="formulario_item">
-          <span>¿Cual es tu corr&eacuteo?</span>
+        <label for="correo" class="formulario_item">
+          <span class="label_input">¿Cual es tu corr&eacuteo?</span>
           <input type="email" name="id" id="id" autocomplete="email" required />
-        </LAbel>
+        </label>
 
-        <LAbel for="password" class="formulario_item">
-          <span>Digita tu pasword </span>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            autocomplete="new-password"
-            required
-          />
-        </LAbel>
+        <label for="password" class="formulario_item">
+          <span class="label_input">Digita tu pasword </span>
+          <input type="password" name="password" id="password" autocomplete="new-password" required/>
+        </label>
 
-        <LAbel for="birthday" class="formulario_item">
-          <span>¿Cual es tu fecha de nacimiento?</span>
-          <input
-            type="date"
-            name="birthday"
-            id="birthday"
-            autocomplete="bday-day"
-            required
-          />
-        </LAbel>
-        <input type="submit" id="enviar">
-        <input type="button" value="Cancelar" id="cancelar" onclick="history.back()">
-
+        <label for="birthday" class="formulario_item">
+          <span class="label_input">¿Cual es tu fecha de nacimiento?</span>
+          <input type="date" name="birthday" id="birthday" autocomplete="bday-day" required />
+        </label>
+        <input type="submit" id="enviar" />
+        <inputtype="button" value="Cancelar" id="cancelar" onclick="history.back()"
+        />
       </form>
     </main>
   </body>

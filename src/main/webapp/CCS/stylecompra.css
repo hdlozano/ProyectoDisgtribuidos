@@ -1,0 +1,25 @@
+.main_nav{
+    text-align-last: right;
+    margin-top: 10px;
+    color: black;
+    list-style: none;
+    padding: 0px;
+    background-color: rgb(223, 208, 208);
+}
+.main_nav__item{
+    display: inline-block;
+}
+
+
+.main_nav__sitem a {
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+.main_nav__item a :hover{
+    color: blue;
+}
+
+.main_nav__item a ::after{
+    content: "|";
+}

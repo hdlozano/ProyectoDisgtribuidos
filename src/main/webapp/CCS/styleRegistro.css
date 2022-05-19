@@ -56,7 +56,13 @@ main{
 
 .label_input{
     margin-right: 30px;
-    max-width: 300px;
-    text-align: left;
+    max-block-size: 300px;
+    text-align: center;
+}
 
+.inp_item{
+    text-align: center;
+    margin-left: 30px;
+    max-block-size: 150px;
+    align-items: center;
 }

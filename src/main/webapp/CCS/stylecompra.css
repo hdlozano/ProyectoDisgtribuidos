@@ -23,3 +23,22 @@
 .main_nav__item a ::after{
     content: "|";
 }
+.advertencia{
+    text-align: center;
+}
+
+.compra{
+    display: list-item;
+    list-style: none;
+}
+
+.from_item{
+    margin: 30px;
+    text-align: center;
+    display: list-item;
+    list-style: none;
+}
+
+.from_item__span{
+    margin: 30px;
+}

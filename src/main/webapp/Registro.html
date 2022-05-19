@@ -30,31 +30,32 @@
       <form action="./" class="formulario">
         <label for="nombre" class="formulario_item">
           <span class="label_input">¿Cual es tu nombre?</span>
-          <input type="text" name="nombre" id="nombre" />
+          <input type="text" class="inp_item" name="nombre" id="nombre" autocomplete="name" required/>
         </label>
 
         <label for="id" class="formulario_item">
           <span class="label_input">¿Cual es tu identificac&iacuteon?</span>
-          <input type="number" name="id" id="id" autocomplete="cc-number" required />
+          <input type="number" class="inp_item" name="id" id="id" autocomplete="cc-number" required />
         </label>
 
         <label for="correo" class="formulario_item">
           <span class="label_input">¿Cual es tu corr&eacuteo?</span>
-          <input type="email" name="id" id="id" autocomplete="email" required />
+          <input type="email" class="inp_item" name="id" id="id" autocomplete="email" required />
         </label>
 
         <label for="password" class="formulario_item">
           <span class="label_input">Digita tu pasword </span>
-          <input type="password" name="password" id="password" autocomplete="new-password" required/>
+          <input type="password" class="inp_item" name="password" id="password" autocomplete="new-password" required/>
         </label>
 
         <label for="birthday" class="formulario_item">
           <span class="label_input">¿Cual es tu fecha de nacimiento?</span>
-          <input type="date" name="birthday" id="birthday" autocomplete="bday-day" required />
+          <input type="date" class="inp_item" name="birthday" id="birthday" autocomplete="bday-day" required />
         </label>
-        <input type="submit" id="enviar" />
-        <inputtype="button" value="Cancelar" id="cancelar" onclick="history.back()"
-        />
+        <label for="botones">
+          <input type="submit" id="enviar" />
+          <input type="button" class="inp_item" value="Cancelar" id="cancelar" onclick="history.back()"/>
+        </label>
       </form>
     </main>
   </body>

@@ -24,6 +24,33 @@
             </li>
         </ul>
         </header>
+        <div class="advertencia">
+           <p>Recuerde que las atracciones tienen resticciones de edad y estatura</p>
+        </div>
+        <div class="compra">
+           <form action="comprar" class="from">
+               <label for="item1" class="from_item">
+                  <span class="from_item__span">Pasaporte tipo Infantil</span>
+                  <input type="number" name="item1">
+                  <span>Valor $45000</span>
+               </label>
+               <label for="item2" class="from_item">
+                  <span class="from_item__span">Pasaporte tipo joven</span>
+                  <input type="number" name="item2">
+                  <span>Valor $65000</span>
+               </label>
+               <label for="item3" class="from_item">
+                  <span class="from_item__span">Pasaporte tipo familiar</span>
+                  <input type="number" name="item3">
+                  <span>Valor $50000</span>
+               </label>
+               <label for="botones">
+                  <input type="submit" value="Pagar">
+                  <input type="button" value="Cancelar" onclick="history.back()">
+               </label>
+
+           </form>
+        </div>
     
 </body>
 </html>

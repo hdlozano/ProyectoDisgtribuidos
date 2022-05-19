@@ -29,6 +29,7 @@ main{
     align-content: center;
 }
 .formulario{
+    list-style: none;
     text-align: center;
     margin-top: 12px;
     color: black; 
@@ -36,6 +37,7 @@ main{
 }
 
 .formulario_item{
+    list-style: none;
     text-align: center;
     margin-top: 10px;
     display: list-item;

@@ -88,6 +88,7 @@ public class Control {
 	}
 	
 	public void registroventa(Pasaporte pasaporte,int id2) {
+		
 		try {
 			sentencia = con.prepareStatement("INSERT INTO venta(name_pasport,usuario_id) VALUE(?,?)");
 			sentencia.setString(1, pasaporte.getNamePasport());
@@ -160,6 +161,68 @@ public class Control {
 		}		
 		return numeroManillas;
 	}
-	
+
+	public void actualizarPasaporte(String game, int idpasaporte) {
+		String query=null;
+		if(game.equals("M")) {
+			query = "update venta set passesG1 = passesG1-1 where id_Passport =" + idpasaporte;	
+		}
+		
+		if(game.equals("C")) {
+			query = "update venta set passesG2 = passesG2-1 where id_Passport =" + idpasaporte;	
+		}
+		
+		if(game.equals("T")) {
+			query = "update venta set passesG3 = passesG3-1 where id_Passport =" + idpasaporte;	
+		}
+		
+		if(game.equals("CT")) {
+			query = "update venta set passesG4 = passesG4-1 where id_Passport =" + idpasaporte;	
+		}
+		
+		conexion = new Conexion(URL, "root", "toor");
+		try {
+			conexion.conectar();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		con=conexion.getConexion();
+		try {
+			sentencia = con.prepareStatement(query);
+			sentencia.executeUpdate();
+			conexion.desconectar();
+			System.out.println("Registros Actualizados");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		} 		
+
+	public int cosultarPasadas(int idpasaporte, String game) {
+		int pasadas=0;
+		conexion = new Conexion(URL, "root", "toor");
+		try {
+			conexion.conectar();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		con=conexion.getConexion();
+		String query = "select "+ game + " from venta where id_Passport = "+idpasaporte;
+		try {
+			statement = con.createStatement();
+			rs = statement.executeQuery(query);
+			while(rs.next()) {
+				pasadas =Integer.parseInt(rs.getString(game));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		System.out.println(pasadas+"");
+		return pasadas;
+	}
 
 }

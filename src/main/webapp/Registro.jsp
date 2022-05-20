@@ -35,22 +35,22 @@
 
         <label for="id" class="formulario_item">
           <span class="label_input">¿Cual es tu identificac&iacuteon?</span>
-          <input type="number" class="inp_item" name="id" id="id" autocomplete="cc-number" required />
+          <input type="number" class="inp_item" name="id" id="id" autocomplete="cc-number"  />
         </label>
 
         <label for="email" class="formulario_item">
           <span class="label_input">¿Cual es tu corr&eacuteo?</span>
-          <input type="email" class="inp_item" name="email" id="id" autocomplete="email" required />
+          <input type="email" class="inp_item" name="email" id="id" autocomplete="email" />
         </label>
 
         <label for="password" class="formulario_item">
           <span class="label_input">Digita tu pasword </span>
-          <input type="password" class="inp_item" name="password" id="password" autocomplete="new-password" required/>
+          <input type="password" class="inp_item" name="password" id="password" autocomplete="new-password" />
         </label>
 
         <label for="birthday" class="formulario_item">
           <span class="label_input">¿Cual es tu fecha de nacimiento?</span>
-          <input type="date" class="inp_item" name="birtday" id="birtday" autocomplete="bday-day" required />
+          <input type="date" class="inp_item" name="birtday" id="birtday" autocomplete="bday-day" />
         </label>
         <label for="botones">
           <input type="submit" id="enviar" />

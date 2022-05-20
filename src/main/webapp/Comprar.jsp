@@ -33,8 +33,8 @@
         <div class="compra">
            <form method="post" action="Compra" class="from">
            		<label for="user" class="usuario">
-           		<span>Id usuario</span>
-           		<input type="number" name="user" value= ${id}>
+           		<span>Id usuario </span>
+           		<input type="number" name="id_user" value= "${id_session}"/>
            		</label>
                <label for="item1" class="from_item">
                   <span class="from_item__span">Pasaporte tipo Infantil</span>

@@ -40,7 +40,14 @@ public class RegistroClass extends HttpServlet {
 		
 		control.records(id,name,email,password,birthday);
 		
+		//request.setAttribute("name", request.getParameter("name"));
+		request.setAttribute("id", request.getParameter("id"));
 		
+		request.getSession().setAttribute("id_session", request.getParameter("id"));
+		
+		RequestDispatcher rd;
+		rd = request.getRequestDispatcher("./Comprar.jsp");
+		rd.forward(request, response);
 		
 		/*response.setContentType("text/html");
 		ServletOutputStream out = response.getOutputStream();
@@ -53,12 +60,7 @@ public class RegistroClass extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("name", request.getParameter("name"));
-		request.setAttribute("id", request.getParameter("id"));
 		
-		RequestDispatcher rd = null;
-		request.getRequestDispatcher("./Comprar.jsp");
-		rd.forward(request, response);
 	}
 
 }

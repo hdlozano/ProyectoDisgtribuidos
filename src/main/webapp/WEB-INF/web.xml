@@ -39,4 +39,14 @@
     <servlet-name>RegistroClass</servlet-name>
     <url-pattern>/RegistroClass</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Portal</display-name>
+    <servlet-name>Portal</servlet-name>
+    <servlet-class>controller.Portal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Portal</servlet-name>
+    <url-pattern>/Portal</url-pattern>
+  </servlet-mapping>
 </web-app>

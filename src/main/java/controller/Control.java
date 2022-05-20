@@ -4,8 +4,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
-import model.ComprarM;
 import model.Pasaporte;
 import model.User;
 public class Control {
@@ -18,36 +18,36 @@ public class Control {
 	Connection con;
 	
 	User user;
-	ComprarM compra = new ComprarM();
-	GestionDB db;
+	
 	private Pasaporte pasaporte1;
 	
 	public Control() {
 		
 	}
 
-	public void calculateItem1(int quantityInem1) {
+	public void calculateItem1(int quantityInem1, int id2) {
 		while (quantityInem1!=0) {
 			int cons = busquedaIdBrazalete();//realizar consulta a la bd para ver el consecutivo
 			pasaporte1 = new Pasaporte("nino", cons, "montaña", "electronico", "chocones", "barco");
-			registroventa(pasaporte1, this.id);
+			registroventa(pasaporte1, id2);
 			quantityInem1--;
 		}		
 	}
 	
-	public void calculateItem2(int quantityInem2) {
+	public void calculateItem2(int quantityInem2, int id2) {
 		while (quantityInem2!=0) {
-			//db.establecerConexion();
-			compra.compraPas1(user);
+			int cons = busquedaIdBrazalete();//realizar consulta a la bd para ver el consecutivo
+			pasaporte1 = new Pasaporte("joven", cons, "montaña", "electronico", "chocones", "barco");
+			registroventa(pasaporte1, id2);
 			quantityInem2--;
 		}
 	}
 	
-	public void calculateItem3(int quantityInem3) {
+	public void calculateItem3(int quantityInem3, int id2) {
 		while (quantityInem3!=0) {
-			
-			//db.establecerConexion();
-			compra.compraPas1(user);
+			int cons = busquedaIdBrazalete();//realizar consulta a la bd para ver el consecutivo
+			pasaporte1 = new Pasaporte("familiar", cons, "montaña", "electronico", "chocones", "barco");
+			registroventa(pasaporte1, id2);
 			quantityInem3--;
 		}
 	}
@@ -87,12 +87,12 @@ public class Control {
 
 	}
 	
-	public void registroventa(Pasaporte pasaporte,int id) {
-		System.out.println(this.id);
+	public void registroventa(Pasaporte pasaporte,int id2) {
+		System.out.println(id2);
 		try {
 			sentencia = con.prepareStatement("INSERT INTO venta(name_pasport,usuario_id) VALUE(?,?)");
 			sentencia.setString(1, pasaporte.getNamePasport());
-			sentencia.setInt(2,this.id);
+			sentencia.setInt(2, id2);
 			sentencia.executeUpdate();
 			conexion.desconectar();
 			System.out.println("Registros guardados");
@@ -135,6 +135,32 @@ public class Control {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public ArrayList<Integer> brazaletes(int id2) {
+		conexion = new Conexion(URL, "root", "toor");
+		try {
+			conexion.conectar();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		con=conexion.getConexion();
+		ArrayList<Integer> numeroManillas = new ArrayList<Integer>();
+		String query = "select id_Passport from venta where usuario_id="+id2;
+		try {
+			statement = con.createStatement();
+			rs = statement.executeQuery(query);
+			while(rs.next()) {
+				System.out.println(rs.getString("id_Passport"));
+				numeroManillas.add(Integer.parseInt(rs.getString("id_Passport")));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		return numeroManillas;
 	}
 	
 

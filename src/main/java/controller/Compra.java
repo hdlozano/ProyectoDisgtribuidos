@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Servlet implementation class Compra
@@ -29,21 +30,30 @@ public class Compra extends HttpServlet {
 		int quantityInem1= Integer.parseInt(request.getParameter("item1"));
 		int quantityInem2 = Integer.parseInt(request.getParameter("item2"));
 		int quantityInem3= Integer.parseInt(request.getParameter("item3"));
+		int id = Integer.parseInt(request.getParameter("id_user"));
 		
 		if (quantityInem1>0) {
-			control.calculateItem1(quantityInem1);
+			control.calculateItem1(quantityInem1, id);
 		}
 		if (quantityInem2>0) {
-			control.calculateItem2(quantityInem2);
+			control.calculateItem2(quantityInem2,id);
 		}
 		if (quantityInem3>0) {
-			control.calculateItem3(quantityInem3);
+			control.calculateItem3(quantityInem3,id);
 		}
 		
+		ArrayList<Integer> brazaletes= control.brazaletes(id);
 		response.setContentType("text/html");
 
 		ServletOutputStream out = response.getOutputStream();
 		out.print("compra exitosa");
+		out.print("<br></br>");
+		out.print("Los numeros de sus pasaportes son:");
+		for (int i=0;i>brazaletes.size();i++ ) {
+			out.print("<br></br>");
+			String num = brazaletes.indexOf(i)+"";
+			out.print("<%num%>");
+		}
 		
 	}
 

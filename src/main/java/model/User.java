@@ -13,7 +13,7 @@ public class User {
 
     }
 
-	public User(int id, String name, String email, String birtday, String password) {
+	public User(int id, String name, String email, String password, String birtday ) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
@@ -64,6 +64,8 @@ public class User {
 	
 	
     
-
+	public void registroBD() {
+		
+	}
     
 }

@@ -30,7 +30,7 @@
       <form method="pos" action="RegistroClass" class="formulario">
         <label for="name" class="formulario_item">
           <span class="label_input">¿Cual es tu nombre?</span>
-          <input type="text" class="inp_item" name="name" id="nombre" autocomplete="name"/>
+          <input type="text" class="inp_item" name="name" id="name" autocomplete="name"/>
         </label>
 
         <label for="id" class="formulario_item">
@@ -40,7 +40,7 @@
 
         <label for="email" class="formulario_item">
           <span class="label_input">¿Cual es tu corr&eacuteo?</span>
-          <input type="email" class="inp_item" name="email" id="id" autocomplete="email" />
+          <input type="email" class="inp_item" name="email" id="email" autocomplete="email" />
         </label>
 
         <label for="password" class="formulario_item">
@@ -50,7 +50,7 @@
 
         <label for="birthday" class="formulario_item">
           <span class="label_input">¿Cual es tu fecha de nacimiento?</span>
-          <input type="date" class="inp_item" name="birtday" id="birtday" autocomplete="bday-day" />
+          <input type="date" class="inp_item" name="birthday" id="birthday" autocomplete="bday-day" />
         </label>
         <label for="botones">
           <input type="submit" id="enviar" />

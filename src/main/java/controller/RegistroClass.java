@@ -32,12 +32,12 @@ public class RegistroClass extends HttpServlet {
 		String name = request.getParameter("name");
 		int id = Integer.parseInt(request.getParameter("id"));
 	    String email = request.getParameter("email");
-	    String birtday = request.getParameter("birtday");
+	    String birthday = request.getParameter("birthday");
 	    String password = request.getParameter("password");
 		
-		System.out.println(name + " " + id);
+		System.out.println(id+" " +name + " "+email+" "+password+" "+birthday);
 		
-		control.records(id,name,email,password,birtday);
+		control.records(id,name,email,password,birthday);
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

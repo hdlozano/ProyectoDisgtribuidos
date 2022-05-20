@@ -88,7 +88,6 @@ public class Control {
 	}
 	
 	public void registroventa(Pasaporte pasaporte,int id2) {
-		System.out.println(id2);
 		try {
 			sentencia = con.prepareStatement("INSERT INTO venta(name_pasport,usuario_id) VALUE(?,?)");
 			sentencia.setString(1, pasaporte.getNamePasport());
@@ -137,7 +136,7 @@ public class Control {
 		this.id = id;
 	}
 
-	public ArrayList<Integer> brazaletes(int id2) {
+	public ArrayList<String> brazaletes(int id2) {
 		conexion = new Conexion(URL, "root", "toor");
 		try {
 			conexion.conectar();
@@ -146,14 +145,13 @@ public class Control {
 			e.printStackTrace();
 		}
 		con=conexion.getConexion();
-		ArrayList<Integer> numeroManillas = new ArrayList<Integer>();
+		ArrayList<String> numeroManillas = new ArrayList<String>();
 		String query = "select id_Passport from venta where usuario_id="+id2;
 		try {
 			statement = con.createStatement();
 			rs = statement.executeQuery(query);
 			while(rs.next()) {
-				System.out.println(rs.getString("id_Passport"));
-				numeroManillas.add(Integer.parseInt(rs.getString("id_Passport")));
+				numeroManillas.add(rs.getString("id_Passport"));
 			}
 			
 		} catch (SQLException e) {

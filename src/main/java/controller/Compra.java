@@ -42,7 +42,7 @@ public class Compra extends HttpServlet {
 			control.calculateItem3(quantityInem3,id);
 		}
 		
-		ArrayList<Integer> brazaletes= control.brazaletes(id);
+		ArrayList<String> brazaletes= control.brazaletes(id);
 		response.setContentType("text/html");
 
 		ServletOutputStream out = response.getOutputStream();
@@ -51,7 +51,7 @@ public class Compra extends HttpServlet {
 		out.print("Los numeros de sus pasaportes son:");
 		for (int i=0;i>brazaletes.size();i++ ) {
 			out.print("<br></br>");
-			String num = brazaletes.indexOf(i)+"";
+			String num = brazaletes.indexOf(i)+"";;
 			out.print("<%num%>");
 		}
 		

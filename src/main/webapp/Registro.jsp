@@ -27,10 +27,10 @@
       </nav>
     </header>
     <main>
-      <form action="./" class="formulario">
-        <label for="nombre" class="formulario_item">
+      <form method="pos" action="RegistroClass" class="formulario">
+        <label for="name" class="formulario_item">
           <span class="label_input">¿Cual es tu nombre?</span>
-          <input type="text" class="inp_item" name="nombre" id="nombre" autocomplete="name" required/>
+          <input type="text" class="inp_item" name="name" id="nombre" autocomplete="name" required/>
         </label>
 
         <label for="id" class="formulario_item">
@@ -38,9 +38,9 @@
           <input type="number" class="inp_item" name="id" id="id" autocomplete="cc-number" required />
         </label>
 
-        <label for="correo" class="formulario_item">
+        <label for="email" class="formulario_item">
           <span class="label_input">¿Cual es tu corr&eacuteo?</span>
-          <input type="email" class="inp_item" name="id" id="id" autocomplete="email" required />
+          <input type="email" class="inp_item" name="email" id="id" autocomplete="email" required />
         </label>
 
         <label for="password" class="formulario_item">
@@ -50,7 +50,7 @@
 
         <label for="birthday" class="formulario_item">
           <span class="label_input">¿Cual es tu fecha de nacimiento?</span>
-          <input type="date" class="inp_item" name="birthday" id="birthday" autocomplete="bday-day" required />
+          <input type="date" class="inp_item" name="birtday" id="birtday" autocomplete="bday-day" required />
         </label>
         <label for="botones">
           <input type="submit" id="enviar" />

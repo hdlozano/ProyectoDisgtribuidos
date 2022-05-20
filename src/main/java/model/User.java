@@ -6,14 +6,14 @@ public class User {
     private int id;
     private String name;
     private String email;
-    private Date birtday;
+    private String birtday;
     private String password;
 
     public User(){
 
     }
 
-	public User(int id, String name, String email, Date birtday, String password) {
+	public User(int id, String name, String email, String birtday, String password) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
@@ -45,11 +45,11 @@ public class User {
 		this.email = email;
 	}
 
-	public Date getBirtday() {
+	public String getBirtday() {
 		return birtday;
 	}
 
-	public void setBirtday(Date birtday) {
+	public void setBirtday(String birtday) {
 		this.birtday = birtday;
 	}
 

@@ -19,4 +19,24 @@
     <servlet-name>Control</servlet-name>
     <url-pattern>/Control</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Compra</display-name>
+    <servlet-name>Compra</servlet-name>
+    <servlet-class>controller.Compra</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Compra</servlet-name>
+    <url-pattern>/Compra</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegistroClass</display-name>
+    <servlet-name>RegistroClass</servlet-name>
+    <servlet-class>controller.RegistroClass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistroClass</servlet-name>
+    <url-pattern>/RegistroClass</url-pattern>
+  </servlet-mapping>
 </web-app>

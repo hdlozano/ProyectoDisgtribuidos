@@ -21,11 +21,13 @@ public class Compra {
 	
 	public void compraPas2() {
 		int cons = 0;//realizar consulta a la bd para ver el consecutivo
-		pasaporte1 = new Pasaporte("joven", cons, "montaña", "karts", "chocones", "martillo");
+		pasaporte2 = new Pasaporte("joven", cons, "montaña", "karts", "chocones", "martillo");
+		conexion.GuardarVenta(pasaporte2);
 	}
 	
 	public void compraPas3() {
 		int cons = 0;//realizar consulta a la bd para ver el consecutivo
-		pasaporte1 = new Pasaporte("familia", cons, "montaña", "troncos", "chocones", "pendulo");
+		pasaporte3 = new Pasaporte("familia", cons, "montaña", "troncos", "chocones", "pendulo");
+		conexion.GuardarVenta(pasaporte3);
 	}
 }

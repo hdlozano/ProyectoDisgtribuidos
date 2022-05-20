@@ -13,17 +13,17 @@
 		 <nav>
  			<ul class="main_nav"> 
  				<li class="main_nav__item">
-					<a href="./Index.html">Inicio</a> 
+					<a href="./Index.jsp">Inicio</a> 
  			
  				</li>
  				<li class="main_nav__item">
-					<a href="./Registro.html">Registro</a>
+					<a href="./Registro.jsp">Registro</a>
  				</li>
  				<li class="main_nav__item">
-					<a href="./Comprar.html">Comprar</a>
+					<a href="./Comprar.jsp">Comprar</a>
  				</li>
  				<li class="main_nav__item">
-					<a href="./PortalEmpresarial.html">Portal Empresarial</a>
+					<a href="./PortalEmpresarial.jsp">Portal Empresarial</a>
 			 	</li>
  		</ul>
 	</nav>
@@ -39,13 +39,6 @@
 			<p>
 				Disfruta de nuestros carritos chocones. Recuerda que debes medir mas de 1.6m
 			</p>
-			
-		</section>
-		<form method = get action= Control>
-			Enter No: <input type= text type=text name=t1>
-			<br><br>
-			<input type=submit value = "Verificar">	
-		</form>
 	</main>	
 	<fother>
 	Este es el foother 

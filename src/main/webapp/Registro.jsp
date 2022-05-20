@@ -9,22 +9,22 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul class="main_nav">
-          <li class="main_nav__item">
-            <a href="./Index.html">Inicio</a>
-          </li>
-          <li class="main_nav__item">
-            <a href="./Registro.html">Registro</a>
-          </li>
-          <li class="main_nav__item">
-            <a href="./Comprar.html">Comprar</a>
-          </li>
-          <li class="main_nav__item">
-            <a href="./PortalEmpresarial.html">Portal Empresarial</a>
-          </li>
-        </ul>
-      </nav>
+       <nav>
+ 			<ul class="main_nav"> 
+ 				<li class="main_nav__item">
+					<a href="./Index.jsp">Inicio</a> 
+ 				</li>
+ 				<li class="main_nav__item">
+					<a href="./Registro.jsp">Registro</a>
+ 				</li>
+ 				<li class="main_nav__item">
+					<a href="./Comprar.jsp">Comprar</a>
+ 				</li>
+ 				<li class="main_nav__item">
+					<a href="./PortalEmpresarial.jsp">Portal Empresarial</a>
+			 	</li>
+ 		</ul>
+	</nav>
     </header>
     <main>
       <form method="pos" action="RegistroClass" class="formulario">

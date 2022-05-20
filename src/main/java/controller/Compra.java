@@ -26,8 +26,25 @@ public class Compra extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		int quantityInem1= Integer.parseInt(request.getParameter("item1"));
+		int quantityInem2 = Integer.parseInt(request.getParameter("item2"));
+		int quantityInem3= Integer.parseInt(request.getParameter("item3"));
+		
+		if (quantityInem1>0) {
+			control.calculateItem1(quantityInem1);
+		}
+		if (quantityInem2>0) {
+			control.calculateItem2(quantityInem2);
+		}
+		if (quantityInem3>0) {
+			control.calculateItem3(quantityInem3);
+		}
+		
+		response.setContentType("text/html");
+
+		ServletOutputStream out = response.getOutputStream();
+		out.print("compra exitosa");
+		
 	}
 
 	/**
@@ -36,16 +53,7 @@ public class Compra extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 		
-		int quantityInem1= Integer.parseInt(request.getParameter("item1"));
-		int quantityInem2 = Integer.parseInt(request.getParameter("item2"));
-		int quantityInem3= Integer.parseInt(request.getParameter("item3"));
-		
-		if (quantityInem1>0) {
-			control.calculateItem1(quantityInem1);
-		}
-		
-		response.setContentType("text/html");
-		ServletOutputStream out = response.getOutputStream();
+				//ServletOutputStream out = response.getOutputStream();
 		
 		
 		

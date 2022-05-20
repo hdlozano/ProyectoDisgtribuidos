@@ -1,5 +1,6 @@
 package controller;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.annotation.WebServlet;
@@ -38,27 +39,26 @@ public class RegistroClass extends HttpServlet {
 		System.out.println(id+" " +name + " "+email+" "+password+" "+birthday);
 		
 		control.records(id,name,email,password,birthday);
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		
+		
+		/*response.setContentType("text/html");
+		ServletOutputStream out = response.getOutputStream();
+		out.print("registro exitoso");*/
+
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-		String name = request.getParameter("name");
-		int id = Integer.parseInt(request.getParameter("id"));
-	    String email = request.getParameter("email");
-	    String birtday = request.getParameter("birtday");
-	    String password = request.getParameter("password");
+		request.setAttribute("name", request.getParameter("name"));
+		request.setAttribute("id", request.getParameter("id"));
 		
-		
-		
-		control.records(id,name,email,password,birtday);
-		response.setContentType("text/html");
-		ServletOutputStream out = response.getOutputStream();
-		out.print("registro exitoso");
+		RequestDispatcher rd = null;
+		request.getRequestDispatcher("./Comprar.jsp");
+		rd.forward(request, response);
 	}
 
 }

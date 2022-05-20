@@ -7,11 +7,11 @@ import java.sql.SQLException;
 import model.Compra;
 import model.User;
 public class Control {
-	final String URL = "jdbc:mysql//Localhost:3306/proyecto";
+	final String URL = "jdbc:mysql://Localhost:3306/proyecto?useSSL=false";
 	PreparedStatement sentencia;
 	ResultSet resultado;
 	Compra compra = new Compra();
-	Conexion2 conexion;
+	//Conexion2 conexion;
 	public Control() {
 		
 	}
@@ -30,7 +30,13 @@ public class Control {
 	public void records(int id, String name, String email, String password, String birtday) {
 		// TODO Auto-generated method stub
 		User user = new User(id, name, email, password, birtday);
-		conexion = new Conexion2(URL, "root", "toor");
+		Conexion2 conexion = new Conexion2(URL, "root", "toor");
+		try {
+			conexion.conectar();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println(conexion.getConexion2());
 		
 		//conexion.getConexion();

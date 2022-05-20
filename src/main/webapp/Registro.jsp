@@ -30,7 +30,7 @@
       <form method="pos" action="RegistroClass" class="formulario">
         <label for="name" class="formulario_item">
           <span class="label_input">¿Cual es tu nombre?</span>
-          <input type="text" class="inp_item" name="name" id="nombre" autocomplete="name" required/>
+          <input type="text" class="inp_item" name="name" id="nombre" autocomplete="name"/>
         </label>
 
         <label for="id" class="formulario_item">
